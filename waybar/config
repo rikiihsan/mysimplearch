@@ -1,0 +1,83 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 6,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "backlight", "network", "battery", "custom/power"],
+
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "clock": {
+        "timezone": "Asia/Jakarta",
+        "format": "{:%a %d %b  %H:%M}",
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip-format": "<tt>{:%Y-%m-%d (%A)}</tt>",
+        "on-click-right": "mode"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": " {percent}%",
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": " Offline",
+        "tooltip-format": "{essid} ({signalStrength}%)\n{ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+    	"bat": "BAT0",
+    	"states": {
+        	"warning": 30,
+        	"critical": 15
+    	},
+    	"format": "{icon} {capacity}%",
+    	"format-charging": " {capacity}%",
+    	"format-plugged": " {capacity}%",
+    	"format-alt": "{icon} {time}",
+    	"format-icons": ["", "", "", "", ""],
+    	"tooltip-format": "{status} • {capacity}%"
+    },
+
+    "custom/power": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": "Session Menu"
+    }
+}

@@ -1,0 +1,70 @@
+/* Color variables */
+@define-color bg #2f343f;
+@define-color bg-alt #404552;
+@define-color fg #d3dae3;
+@define-color fg-alt #8b92a0;
+@define-color accent #5294e2;
+@define-color urgent #e53935;
+
+/* Window */
+window {
+    background-color: @bg;
+    border: 2px solid @accent;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: "Fira Code";
+    font-size: 11pt;
+}
+
+/* Input bar */
+#input {
+    background-color: @bg-alt;
+    border-radius: 4px;
+    padding: 8px;
+    color: @fg;
+}
+
+#input:focus {
+    border: none;
+    outline: none;
+}
+
+/* Placeholder text */
+#input::placeholder {
+    color: @fg-alt;
+}
+
+/* List */
+#inner-box {
+    margin-top: 10px;
+}
+
+#outer-box {
+    padding: 0;
+}
+
+#scroll {
+    margin-top: 10px;
+}
+
+/* Entries */
+#entry {
+    padding: 8px;
+    border-radius: 4px;
+    color: @fg;
+}
+
+#entry:selected {
+    background-color: @accent;
+    color: @bg;
+}
+
+/* Icons */
+#entry image {
+    margin-right: 8px;
+}
+
+/* Text */
+#text {
+    color: inherit;
+}

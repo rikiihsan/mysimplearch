@@ -1,0 +1,135 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Fira Code", "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background-color: rgba(47, 52, 63, 0.95);
+    color: #d3dae3;
+}
+
+/* Workspace indicators – minimal but clear */
+#workspaces button {
+    padding: 0 6px;
+    background: transparent;
+    color: #7a8699;
+    transition: color 0.2s;
+}
+
+#workspaces button:hover {
+    color: #5294e2;
+}
+
+#workspaces button.focused {
+    color: #5294e2;
+    background: rgba(82, 148, 226, 0.15);
+}
+
+#workspaces button.urgent {
+    color: #e53935;
+    background: rgba(229, 57, 53, 0.15);
+}
+
+/* Mode indicator */
+#mode {
+    background: #5294e2;
+    color: white;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+
+/* Module containers – consistent sizing, better touch targets */
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#custom-power {
+    padding: 0 10px;
+    margin: 0 2px;
+    background: rgba(82, 148, 226, 0.1);
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+#clock {
+    background: rgba(82, 148, 226, 0.2);
+    color: #5294e2;
+    font-weight: bold;
+    padding: 0 14px;
+}
+
+#battery.charging, #battery.plugged {
+    background: rgba(102, 187, 106, 0.2);
+    color: #66bb6a;
+}
+
+#battery.warning:not(.charging) {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+}
+
+#battery.critical:not(.charging) {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    /* Optional: comment out if avoiding all animations */
+    animation: blink 1s step-start infinite;
+}
+
+#backlight {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+#network.disconnected {
+    background: rgba(244, 67, 54, 0.15);
+    color: #f44336;
+}
+
+#pulseaudio.muted {
+    background: rgba(158, 158, 158, 0.15);
+    color: #9e9e9e;
+}
+
+#custom-power {
+    background: rgba(229, 57, 53, 0.15);
+    color: #e53935;
+    padding: 0 11px;
+}
+
+/* Hover feedback – subtle background shift (no box-shadow = lighter) */
+#clock:hover,
+#battery:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover {
+    background-color: rgba(82, 148, 226, 0.3);
+}
+
+#custom-power:hover {
+    background-color: rgba(229, 57, 53, 0.3);
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(47, 52, 63, 0.98);
+    border: 1px solid rgba(82, 148, 226, 0.4);
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+tooltip label {
+    color: #d3dae3;
+    font-size: 12px;
+}
+
+@keyframes blink {
+    50% { opacity: 0.6; }
+}

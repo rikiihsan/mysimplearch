@@ -1,0 +1,21 @@
+# General behavior
+show=drun,run,window
+matching=fuzzy
+allow_images=true
+image_size=24
+prompt=Search...
+term=kitty
+
+# Layout
+width=600
+lines=10
+columns=1
+hide_scroll=true
+location=center
+layer=top
+
+# Icons
+icon_theme=Papirus-Dark
+
+# Performance / UX
+gtk_dark=true

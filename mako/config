@@ -1,0 +1,32 @@
+# Swaylock configuration
+daemonize
+show-failed-attempts
+clock
+screenshot
+effect-blur=7x5
+effect-vignette=0.5:0.5
+color=2f343f
+
+indicator
+indicator-radius=100
+indicator-thickness=7
+
+ring-color=5294e2
+key-hl-color=66bb6a
+line-color=00000000
+inside-color=2f343f88
+separator-color=00000000
+
+text-color=d3dae3
+text-caps-lock-color=e53935
+
+ring-ver-color=5294e2
+inside-ver-color=2f343f88
+text-ver-color=d3dae3
+
+ring-wrong-color=e53935
+inside-wrong-color=2f343f88
+text-wrong-color=e53935
+
+font="Fira Code"
+font-size=24
