@@ -40,7 +40,7 @@ paru -S --needed --noconfirm greetd greetd-tuigreet wlogout
 sudo systemctl enable greetd.service
 sudo systemctl set-default graphical.target
 
-sudo cp greetd/config.toml /etc/greetd/config.toml
+sudo cp ./greetd/config.toml /etc/greetd/config.toml
 
 # -----------------------------------------------------
 # PipeWire (user services)
