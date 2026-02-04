@@ -72,7 +72,7 @@
     	"format-plugged": " {capacity}%",
     	"format-alt": "{icon} {time}",
     	"format-icons": ["", "", "", "", ""],
-    	"tooltip-format": "{status} • {capacity}%"
+    	"max-length":20
     },
 
     "custom/power": {
@@ -80,4 +80,5 @@
         "on-click": "wlogout",
         "tooltip": "Session Menu"
     }
+
 }
